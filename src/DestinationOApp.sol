@@ -26,7 +26,7 @@ contract DestinationOApp is OAppReceiver {
      * @notice Initializes the OApp with the source chain's endpoint address.
      * @param _endpoint The endpoint address.
      */
-    constructor(address _endpoint) OAppCore(_endpoint, /*owner*/msg.sender) Ownable(msg.sender) {}
+    constructor(address _endpoint, address _owner) OAppCore(_endpoint, _owner) Ownable(msg.sender) {}
     
     /**
      * @dev Called when the Executor executes EndpointV2.lzReceive. It overrides the equivalent function in the parent OApp contract.
