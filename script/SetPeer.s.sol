@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.24;
+pragma solidity ^0.8.24;
 
-// import {OApp} from "@layerzerolabs/oapp-evm/contracts/oapp/OApp.sol";
 import {Script} from "forge-std/Script.sol";
 import {SourceOApp} from "../src/SourceOApp.sol";
-// import {DestinationPoolLZ} from "../../src/layerzero/DestinationPoolLZ.sol";
 
 contract SetPeer is Script {
     // The real endpoint ids will vary per chain, and can be found under "Supported Chains"
@@ -12,8 +10,8 @@ contract SetPeer is Script {
     uint32 public optimismSepoliaEid = 40232;
 
     function run() external {
-        address ARBITRUM_SOURCE_CONTRACT = 0xaC2422F51bcED9E675690f988dEf412fB790A27D;
-        address OPTIMISM_DESTINATION_CONTRACT = 0xb12081B5d7E1168847a4548e3f8FF27Dd6886916;
+        address ARBITRUM_SOURCE_CONTRACT = 0x8dd1414EA59D6a7c64167f9F403df5F49C20538F;
+        address OPTIMISM_DESTINATION_CONTRACT = 0x8dd1414EA59D6a7c64167f9F403df5F49C20538F;
 
         // Retrieve the private key from the environment variable
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
