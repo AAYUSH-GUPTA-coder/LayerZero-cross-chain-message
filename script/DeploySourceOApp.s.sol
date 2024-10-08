@@ -17,9 +17,7 @@ contract DeploySourceOApp is Script {
         vm.startBroadcast(deployerPrivateKey);
 
         // Deploy the contract
-        // SourceOApp sourceOApp = new SourceOApp(endpoint, owner);
-
-        SourceOApp sourceOApp = new SourceOApp(endpoint);
+        SourceOApp sourceOApp = new SourceOApp(endpoint, owner);
 
         // Log the deployed contract address
         console.log("SourceOApp contract ARB SEPOLIA CHAIN deployed at:", address(sourceOApp));
